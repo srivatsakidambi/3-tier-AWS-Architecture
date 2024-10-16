@@ -13,3 +13,13 @@ To begin with we will first setup the VPC which will host the entire 3 tier arch
 ![plot](./CreateVPC.png)
 ● Only create a vpc here and give it a name. Provide your own name or use the same one as shown here.
 ![plot](./CreateVPC2.png)
+Now we will create Subnets, go to Subnets on the left hand side of the VPC service and click on it. 
+- Add your VPC ID (select from the drop down where you will find it already is existing and select it. )
+![plot](./CreateSubnet1.png)
+-	Assign it a name letting you know what it is your first public subnet
+-	Put it in any availability zone and give it a CIDR of 192.168.1.0/24
+![plot](./CreateSubnet2.png)
+-	Add a second subnet and name it Private Subnet 1 or something to let you know it is your first private subnet
+-	Put it in the same availability zone as the first subnet you made and give it a CIDR of 192.168.2.0/24
+![plot](./CreateSubnet3.png)
+
