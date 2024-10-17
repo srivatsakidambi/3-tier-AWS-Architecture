@@ -35,8 +35,15 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 - Allocate an Elastic IP address by going to Elastic IPs on the left hand side and click “Allocate Elastic IP address”
 ![plot](./Elastic_IP1.png)
 
-Everything should be good as default but make sure that you are in the same region you have been creating everything in and then press “Allocate”. You can also add a name tag if you wish but it isn’t necessary
+- Everything should be good as default but make sure that you are in the same region you have been creating everything in and then press “Allocate”. You can also add a name tag if you wish but it isn’t necessary
 
+![plot](./Elastic_IP2.png)
+
+- We will now create an internet gateway and attach it to the VPC by going to Internet Gateways on the left hand side and clicking “Create Internet Gateway”
+![plot](./Internet_Gateway1.png)
+
+- We will name it something similar to what is below and then click “Create Internet Gateway”
+![plot](./Internet_Gateway2.png)
 
 
 
