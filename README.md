@@ -45,6 +45,29 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 - We will name it something similar to what is below and then click “Create Internet Gateway”
 ![plot](./Internet_Gateway2.png)
 
+- Once it is created attach it to your VPC by clicking “Attach to a VPC” on the top of the screen
+![plot](./Internet_Gateway3.png)
+
+●	Click the drop down and select your vpc that you made
+![plot](./Internet_Gateway4.png)
+
+●	Create a NAT Gateway by clicking on Nat Gateways on the left hand side and then clicking “Create NAT Gateway”
+![plot](./Nat_Gateway1.png)
+
+●	Give it a name similar to the one below and assign it to a public subnet
+●	Click the drop down for Elastic IPs and click the one you created previously
+●	Click “Create NAT gateway”
+
+
+●	Create Route Tables by first heading to “Route Tables” on the left hand side
+●	Click “Create route table”
+
+
+●	Give it a name letting you know this is the public route table for your lab
+●	Assign your VPC to it and click “Create route table”
+
+
+
 
 
 
