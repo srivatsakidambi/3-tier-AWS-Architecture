@@ -24,9 +24,11 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 -	Add a second subnet and name it Private Subnet 1 or something to let you know it is your first private subnet
 -	Put it in the same availability zone as the first subnet you made and give it a CIDR of 192.168.2.0/24
 ![plot](./CreateSubnet3.png)
+
 -	Add a third subnet and assign a name letting you know it is the second private subnet you will be making
 -	Put it in the same availability zone as your first public subnet and give it a CIDR of 192.168.3.0/24
 ![plot](./CreateSubnet4.png)
+
 - Add a fourth and final subnet and give it a name letting you know it is the third private subnet
 - Put it in a different availability zone from the rest of your subnets and give it a CIDR of 192.168.4.0/24
 ![plot](./CreateSubnet5.png)
@@ -36,7 +38,6 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 ![plot](./Elastic_IP1.png)
 
 - Everything should be good as default but make sure that you are in the same region you have been creating everything in and then press “Allocate”. You can also add a name tag if you wish but it isn’t necessary
-
 ![plot](./Elastic_IP2.png)
 
 - We will now create an internet gateway and attach it to the VPC by going to Internet Gateways on the left hand side and clicking “Create Internet Gateway”
