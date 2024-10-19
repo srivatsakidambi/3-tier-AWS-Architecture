@@ -59,13 +59,13 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 
 - Give it a name similar to the one below and assign it to a public subnet
 - Click the drop down for Elastic IPs and click the one you created previously
-- Click “Create NAT gateway
+- Click “Create NAT gateway"
 
 ![plot](./Nat_Gateway2.png)
 
 - Create Route Tables by first heading to “Route Tables” on the left hand side
 - Click “Create route table”
-![plot](./Route_Table1.png)
+![plot](./Nat_Gateway2.png)
 
 - Give it a name letting you know this is the public route table for your lab
 - Assign your VPC to it and click “Create route table”
