@@ -69,7 +69,7 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 
 - Give it a name letting you know this is the public route table for your lab
 - Assign your VPC to it and click “Create route table”
-[plot](./Route_Table2.png)
+[plot](./Route_Table1.png)
 
 - Make a second route table naming it something to let you know that this is the private route table for your lab and assign your VPC to it
 
