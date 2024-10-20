@@ -77,20 +77,72 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 
 - Now associate your subnets with their respective route table
 - Click on the public route table and click on “Subnet association” next to “Details”
+- Click on “Edit subnet associations”
   
 ![plot](./Route_Table4.png)
-
--	Click on “Edit subnet associations”
-
-![plot](./Route_Table5.png)
 
 
 -	Click on your public subnet and then click “Save associations”
 
-![plot](./Route_Table6.png)
+![plot](./Route_Table5.png)
 
 -	Now add a route to our public route table to get access to the internet gateway
 -	Click on “Routes” next to “Details” and click “Edit routes”
+
+-	Add a new route having a destination of anywhere and a target of your internet gateway and click “Save changes”
+
+![plot](./Route_Table6.png)
+
+- Do the same thing for your private route table by clicking on it and going to its subnet associations and editing them
+
 ![plot](./Route_Table7.png)
 
+-	Click on all three of your private subnets and save the associations
 
+![plot](./Route_Table8.png)
+
+-	Go to edit the routes of the private table
+
+
+![plot](./Route_Table9.png)
+- Add a route to the private table that has a destination of anywhere and a target of your Nat gateway that you made earlier
+
+![plot](./Route_Table10.png)
+
+-	Now to create our security groups (One for our bastion host, web server, app server, and our database) we will head to Security Groups on the left and click “Create security group”
+
+![plot](./Security_Group1.png)
+-	Give it a name and description letting you know it is for a bastion host
+- Assign your VPC to it
+- Give it three inbound rules, one for SSH using your IP and one for HTTP using 0.0.0.0/0 as well as https using 0.0.0.0/0
+  
+![plot](./Security_Group2.png)
+
+-	Create another security group
+-	Give it a name and description letting you know it is for a Web server
+-	Assign your VPC to it
+-	Give it the same inbound rules as the Bastion Host security group
+
+![plot](./Security_Group3.png)  
+
+-	Create another security group
+-	Give it a name and description letting you know it is for an app server
+-	Assign your VPC to it
+-	Give it an inbound rule for All ICMP -IPv4 with a source of your web server SG and another inbound rule for SSH with a source of your bastion host SG
+
+![plot](./Security_Group4.png) 
+
+-	Create one final security group
+-	Please give it a name and description letting you know it is for a database server
+-	Assign your VPC to it
+-	Give it two inbound rules both for MYSQL/Aurora and give one of them a source of your app server SG and the other one a source of your bastion host SG
+
+![plot](./Security_Group5.png) 
+
+-	Go back to your bastion host inbound rules and add one more for MYSQL/Aurora and a source of your database SG
+-	Go back to your web server inbound rules and add one more for All ICMP - IPv4 and a source of your app server SG
+-	Go back to your app server inbound rules and add one more for MYSQL/Aurora and a source of your database SG and then an HTTP and HTTPS rule both with a source of 0.0.0.0/0 
+
+Step 2: Create Servers
+-	Create Bastion Host
+-	Select Amazon Linux 2 AMI
