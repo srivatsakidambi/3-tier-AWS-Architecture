@@ -146,3 +146,4 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 Step 2: Create Servers
 -	Create Bastion Host
 -	Select Amazon Linux 2 AMI
+![plot](./Security_Group5.png)
