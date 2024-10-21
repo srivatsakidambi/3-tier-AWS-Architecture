@@ -146,4 +146,14 @@ Now we will create Subnets, go to Subnets on the left hand side of the VPC servi
 Step 2: Create Servers
 -	Create Bastion Host
 -	Select Amazon Linux 2 AMI
-![plot](./Security_Group5.png)
+![plot](./Bastion_Host_EC2_Instance1.jpeg)
+
+- Select t2.micro
+![plot](./Bastion_Host_EC2_Instance2.jpeg)
+
+- Put in your VPC and Public Subnet and enable auto-assign public IP
+![plot](./Bastion_Host_EC2_Instance3.jpeg)
+
+- Storage leave default
+- Add a name tag to let you know this is the Bastion Host
+
