@@ -149,11 +149,31 @@ Step 2: Create Servers
 ![plot](./Bastion_Host_EC2_Instance1.jpeg)
 
 - Select t2.micro
-![plot](./Bastion_Host_EC2_Instance2.jpeg)
+
+![plot](./Bastion_Host_EC2_Instance2.png)
 
 - Put in your VPC and Public Subnet and enable auto-assign public IP
-![plot](./Bastion_Host_EC2_Instance3.jpeg)
+
+![plot](./Bastion_Host_EC2_Instance3.png)
 
 - Storage leave default
 - Add a name tag to let you know this is the Bastion Host
+
+![plot](./RDS_Capture1.png)
+
+- Select an existing group and select your Bastion Host SG
+
+![plot](./RDS_Capture2.png)
+-	Launch and choose an existing keypair. This can be downloaded from the lab page
+-	To make the Web Server follow the same steps until you get to Step 3
+
+![plot](./RDS_Capture3.png)
+-	Follow along like previously and change your network, subnet, and enable auto assign public ip
+- Then go to user data and type this into it to set up the web server
+#!/bin/bash
+sudo yum update -y
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+Sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
 
